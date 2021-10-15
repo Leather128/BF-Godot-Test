@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Prefabs/BF.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Prefabs/Stage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Prefabs/Arrows.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Binds.gd" type="Script" id=4]
+[ext_resource path="res://Channel Logo.png" type="Texture" id=5]
+
+[node name="Scene" type="Node2D"]
+
+[node name="Bind Handler" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Stage" parent="." instance=ExtResource( 2 )]
+position = Vector2( 176, 200 )
+scale = Vector2( 0.65, 0.65 )
+
+[node name="BF" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400.659, 332.956 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Arrow Holder" parent="." instance=ExtResource( 3 )]
+position = Vector2( 348.693, 138.866 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Watermark" type="Sprite" parent="."]
+position = Vector2( -80.6996, 685.009 )
+texture = ExtResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 549.954, 363.076 )
+current = true
+zoom = Vector2( 1.1, 1.1 )
